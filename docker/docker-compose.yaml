@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+
+  nifi:
+    container_name: nifi
+    build:
+      context: nifi
+    ports:
+      - 8080:8080
+
+  nifi-registry:
+    container_name: nifi-registry
+    build:
+      context: nifi-registry
+    ports:
+      - 18080:18080
