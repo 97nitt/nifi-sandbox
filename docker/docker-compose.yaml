@@ -15,3 +15,9 @@ services:
       context: nifi-registry
     ports:
       - 18080:18080
+
+  nifi-bootstrap:
+    container_name: nifi-bootstrap
+    build:
+      context: nifi-bootstrap
+    command: ["--nifi", "http://nifi:8080", "--registry", "http://nifi-registry:18080"]

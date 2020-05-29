@@ -6,6 +6,10 @@ You can start a single-node NiFi cluster and NiFi Registry using [Docker Compose
 
     docker-compose -f docker/docker-compose.yaml up -d
 
-NiFi will be available at [http://localhost:8080/nifi](http://localhost:8080/nifi).
+This will start the following containers (be patient, NiFi takes about a minute to startup):
 
-And the registry will be available at [http://localhost:18080/nifi-registry](http://localhost:18080/nifi-registry).
+| Container                               | Description             | URL                                                                          |
+|-----------------------------------------|-------------------------|------------------------------------------------------------------------------|
+| [nifi](docker/nifi)                     | NiFi                    | [http://localhost:8080/nifi](http://localhost:8080/nifi)                     |
+| [nifi-registry](docker/nifi-registry)   | NiFi Registry           | [http://localhost:18080/nifi-registry](http://localhost:18080/nifi-registry) |
+| [nifi-bootstrap](docker/nifi-bootstrap) | Bootstrap configuration | n/a                                                                          |
